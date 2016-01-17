@@ -498,6 +498,16 @@ a:hover {
     text-decoration: none;
 }
 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: -webkit-linear-gradient(rgba(0,0,0,0), rgba(31,30,52,1));
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(31,30,52,1));
+}
+
 .section, .section2, .section3, .section4 {
     /*background-color: rgba(255,0,0,0.3);*/
     /*border: 2px solid #FFF;*/
@@ -512,12 +522,22 @@ a:hover {
             justify-content: center;
 }
 
+.section {
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
 .section2, .section3 {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
             flex-direction: row;
+}
+
+.section4 {
+    overflow: hidden;
 }
 
 .navigation-container {
@@ -551,7 +571,13 @@ a:hover {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background-color: rgba(255,0,0,0.3);
+    /*background-color: rgba(255,0,0,0.3);*/
+}
+
+.iphone-content {
+    position: absolute;
+    top: 90px;
+    left: 24px;
 }
 
 .feature-description {
@@ -573,5 +599,39 @@ a:hover {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background-color: rgba(0,255,0,0.3);
+    /*background-color: rgba(0,255,0,0.3);*/
 }
+
+#android-robot {
+    position: absolute;
+    right:0;
+    bottom:0;
+    -webkit-transform: translate(50%, 50%) rotate(-45deg) ;
+            transform: translate(50%, 50%) rotate(-45deg) ;
+}
+
+
+#slider-control {
+    position: fixed;
+    left: 98%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    padding: 3px;
+}
+
+#slider-control a {
+    padding: 3px;
+}
+
+#slider-control .dot {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+}
+
+#slider-control .active .dot {
+    background-color: #fff;
+}
+
